@@ -7,15 +7,59 @@
     <title><%= htmlWebpackPlugin.options.title %></title>
   </head>
   <body>
-    <div id="content">
-      <header class="header">
-        <h1 class="title">Dragon Tail</h1>
+    <div id="content" class="content">
+      <header class="header container">
+        <div class="title-container">
+          <h1 class="title">Dragon Tail</h1>
+          <div class="tail-img">
+            <img src="./assets/tail.png" />
+          </div>
+        </div>
         <div class="page-menu-container">
-          <div class="home">My Dojo</div>
-          <div class="menu">Food & Tea</div>
-          <div class="contact">Dragon Radar</div>
+          <button class="home">My Dojo</button>
+          <button class="menu">Food & Tea</button>
+          <button class="contact">Dragon Radar</button>
         </div>
       </header>
+      <main class="main container">
+        <div class="description">
+          <p>
+            <span class="orange-text"
+              >Does a low class warrior like yourself experience fear when
+              gazing eyes upon the mighty Dragon Tail? Or are you ready to
+              ascend to the next level and become a Super spicy eater?
+            </span>
+          </p>
+          <p class="dragon-tail">
+            <span class="orange-text">Dragon Tail (go Super)</span>
+          </p>
+        </div>
+        <div class="card vegeta">
+          <div class="profile-photo">
+            <img src="./assets/vegetaEating.gif" alt="" />
+          </div>
+          <div class="text">
+            <p class="quote">
+              This is the best restaurant on the planet, MY restaurant and you
+              think you can just waltz in here and become the Dragon Tail
+              slayer? Yeah right clown, hmph.
+            </p>
+            <p class="signature">-Vegeta, Saiyan prince</p>
+          </div>
+        </div>
+        <div class="card goku">
+          <div class="profile-photo">
+            <img src="./assets/gokuEating.gif" alt="" />
+          </div>
+          <div class="text">
+            <p class="quote">
+              Hey come down Vegeta, its not like our new Guest has a chance
+              against me, heheheh, I've been training.
+            </p>
+            <p class="signature">-Goku, our hero</p>
+          </div>
+        </div>
+      </main>
     </div>
   </body>
 </html>
