@@ -1,6 +1,8 @@
 import loadSharedHeader from './modules/header';
 import loadHome from './modules/home';
 import loadMenu from './modules/menu';
+import loadContact from './modules/contact';
+import loadSharedFooter from './modules/footer';
 
 import './styles/reset.css';
 import './styles/main.css';
@@ -12,6 +14,7 @@ import './assets/seafood.png';
 import './assets/chicken.png';
 import './assets/waffles.png';
 import './assets/dragonTail.png';
+import './assets/git.png';
 
 function addNavEvents() {
   const content = document.getElementById('content');
@@ -23,25 +26,30 @@ function addNavEvents() {
   homeButton.addEventListener('click', () => {
     const main = document.getElementById('main');
     content.removeChild(main);
+    content.removeChild(footer);
     loadHome();
-    console.log('a');
+    loadSharedFooter();
   });
 
   menuButton.addEventListener('click', () => {
     const main = document.getElementById('main');
     content.removeChild(main);
+    content.removeChild(footer);
     loadMenu();
-    console.log('a');
+    loadSharedFooter();
   });
 
   contactButton.addEventListener('click', () => {
     const main = document.getElementById('main');
+    const footer = document.getElementById('footer');
     content.removeChild(main);
-    loadHome();
-    console.log('a');
+    content.removeChild(footer);
+    loadContact();
+    loadSharedFooter();
   });
 }
 
 loadSharedHeader();
 loadHome();
+loadSharedFooter();
 addNavEvents();

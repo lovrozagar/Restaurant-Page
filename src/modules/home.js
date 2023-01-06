@@ -19,7 +19,7 @@ function description() {
 
   const tryItButton = document.createElement('button');
   tryItButton.textContent = 'Try the Dragon Tail';
-  tryItButton.classList.add('orange-text', 'try');
+  tryItButton.classList.add('try');
 
   dragonTail.appendChild(tryItButton);
 
