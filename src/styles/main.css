@@ -70,7 +70,7 @@ button {
 .title {
   font-family: 'Saiyan Sans', sans-serif;
   font-size: var(--font-xxl);
-  word-spacing: -2vmin;
+  /* word-spacing: -2vmin; */
   color: var(--white);
   background: -webkit-linear-gradient(yellow, red);
   -webkit-background-clip: text;
@@ -92,7 +92,7 @@ button {
   rotate: 270deg;
 }
 
-.title span {
+/* .title span {
   position: relative;
   z-index: 1;
   -webkit-text-stroke: 0.2vmin var(--black-background-color);
@@ -108,7 +108,7 @@ button {
   top: 35%;
   left: 15%;
   z-index: -1;
-}
+} */
 
 .nav,
 .nav .container > button,
