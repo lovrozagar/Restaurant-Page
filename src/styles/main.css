@@ -28,7 +28,7 @@
     hsl(47deg 100% 50%) 92%,
     hsl(49deg 100% 50%) 100%
   );
-  --header-background-color: #fbfcfc;
+  --light-grey: #fbfcfc;
   --black: #000000;
   --white: #ffffff;
   --orange: #ffa500;
@@ -61,7 +61,7 @@ button {
 
 .header {
   text-align: center;
-  background-color: var(--header-background-color);
+  background-color: var(--black);
 }
 
 .container {
@@ -77,9 +77,8 @@ button {
   background: -webkit-linear-gradient(yellow, red);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -webkit-text-stroke: 0.3vmin var(--black);
   position: relative;
-  margin: 1rem 0 0 0;
+  padding: 1rem 0 0 0;
 }
 
 .title::after {
@@ -94,7 +93,10 @@ button {
 }
 
 .nav,
-.nav .container > button,
+.nav .container > button {
+  background-color: #f0f0f0;
+}
+
 .try,
 .card {
   color: var(--white);
@@ -107,12 +109,27 @@ button {
   align-content: center;
   grid-template-columns: 1fr 1fr 1fr;
   border-collapse: separate;
+  position: relative;
 }
 
 .nav .container > button {
   font-size: var(--font-md-lg);
   font-weight: bold;
   padding: 0.25rem 0;
+}
+
+.nav .container > button:hover {
+  color: var(--orange);
+}
+
+.nav .container > button:hover::after {
+  content: '';
+  background: url('../assets/ball.jpg');
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  width: 50px;
+  height: 50px;
 }
 
 .main {
@@ -178,7 +195,7 @@ button {
   margin: 2rem 0;
 }
 
-.goku {
+.card:last-of-type {
   margin-bottom: calc(3rem + 40px);
 }
 
